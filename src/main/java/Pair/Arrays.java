@@ -21,11 +21,12 @@ public class Arrays{
         return new Pair<>(a.get(0),a.get(a.size()-1));
     }
     public static<E extends Comparable<E>> E max(ArrayList<E> al) {
-        return al.stream().max(Comparator.naturalOrder()).orElse(null);
+        return Collections.max(al);
     }
 
-    public static<E extends Comparable<? super E>> E min(ArrayList<E> al){
-        return al.stream().min(Comparator.naturalOrder()).orElse(null);
+    public static<E extends Comparable<E>> E min(ArrayList<E> al){
+//        return al.stream().min(Comparator.naturalOrder()).orElse(null);
+        return Collections.min(al);
     }
 
     public static<E extends Comparable<E>> Pair minMax(ArrayList<E> al) {
